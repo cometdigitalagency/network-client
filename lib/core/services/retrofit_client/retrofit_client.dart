@@ -15,21 +15,21 @@ abstract class RestClient {
 
   @GET(Api.postsPath)
   Future<List<Post>> searchPosts({
-    @Query("body") String? body,
-    @Query("title") String? title,
-    @Query("id") int? id,
-    @Query("userId") int? userId,
+    @Query(Api.bodyQuery) String? body,
+    @Query(Api.titleQuery) String? title,
+    @Query(Api.idQuery) int? id,
+    @Query(Api.userIdQuery) int? userId,
   });
 
   @GET(Api.postPath)
-  Future<Post> getPost(@Path("id") String id);
+  Future<Post> getPost(@Path(Api.idPath) String id);
 
   @POST(Api.postsPath)
   Future<Post> createPost(@Body() PostParams body);
 
   @PUT(Api.postPath)
-  Future<Post> updatePost(@Path("id") String id, @Body() Post body);
+  Future<Post> updatePost(@Path(Api.idPath) String id, @Body() PostParams body);
 
   @DELETE(Api.postPath)
-  Future<dynamic> deletePost(@Path("id") String id);
+  Future<dynamic> deletePost(@Path(Api.idPath) String id);
 }
