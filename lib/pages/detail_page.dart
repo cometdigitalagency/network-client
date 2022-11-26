@@ -75,7 +75,7 @@ class DetailPage extends StatelessWidget {
                   Card(
                     margin: EdgeInsets.zero,
                     elevation: 5,
-                    color: Colors.blue.shade300,
+                    color: Colors.deepPurple.shade300,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
@@ -120,7 +120,7 @@ class DetailPage extends StatelessWidget {
                   ),
                   Card(
                       margin: EdgeInsets.zero,
-                      color: Colors.blue.shade100,
+                      color: Colors.deepPurple.shade100,
                       elevation: 5,
                       child: Container(
                         padding: const EdgeInsets.all(8.0),
